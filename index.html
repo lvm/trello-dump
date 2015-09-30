@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Trello Dump</title>
+    <link href="assets/css/huayra-bootstrap.css" rel="stylesheet">
+    <link href="assets/css/trello-dump.css" rel="stylesheet">
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/trello-dump.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <form>
+          <fieldset>
+            <legend>Data</legend>
+            <label for="usuario">Seleccionar archivo <code>json</code></label>
+            <input type="file" name="file" id="file">
+            <br>
+            <button type="button" class="btn btn-primary" id="btn-load">Cargar</button>
+          </fieldset>
+          <fieldset>
+            <legend>Filtrar por</legend>
+            <label for="usuario">Usuario</label>
+            <select id="usuario" class="form-control">
+              <option> --- </option>
+            </select>
+            <br>
+            <label for="lista">Lista</label>
+            <select id="lista" class="form-control">
+              <option> --- </option>
+            </select>
+            <br>
+            <button type="button" class="btn" id="btn-filter">Filtrar</button>
+            <button type="button" class="btn" id="btn-reset">Reset</button>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tareas</h3>
+          </div>
+          <div class="panel-body" id="json">...</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
